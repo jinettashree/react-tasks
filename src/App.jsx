@@ -1,12 +1,13 @@
 import './App.css'
 // import Form from './EventHandling/form';
 //import FetchError from './errorHandling/fetchError';
-import ErrorPage from './ErrorHandling/errorPage'
+// import ErrorPage from './ErrorHandling/ErrorPage/errorPage';
+import ApiPage from './ErrorHandling/ApiErrorPage/apiPage'
 function App() {
 
   return (
     <>
-      <ErrorPage/>
+      <ApiPage/>
     </>
   )
 }
