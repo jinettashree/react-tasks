@@ -1,13 +1,25 @@
 import './App.css'
-// import Form from './EventHandling/form';
-//import FetchError from './errorHandling/fetchError';
-// import ErrorPage from './ErrorHandling/ErrorPage/errorPage';
-import ApiPage from './ErrorHandling/ApiErrorPage/apiPage'
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import PageOne from './routing/pageOne';
+import PageTwo from './routing/PageTwo';
+
+import Users from './routing/Users';
+
 function App() {
 
   return (
     <>
-      <ApiPage/>
+    <BrowserRouter>
+      <Routes>
+        {/* route params */}
+        <Route path="/" element={<PageOne/>}></Route>
+        <Route path="/:age" element={<PageOne/>}></Route>
+        <Route path="/page-two" element={<PageTwo/>} ></Route>
+        {/* query params */}
+        <Route path="/users" element={<Users/>}></Route>
+      </Routes>
+
+    </BrowserRouter>
     </>
   )
 }
